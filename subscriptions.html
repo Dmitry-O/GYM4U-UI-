@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
+    <title>Subscriptions - GYM 4 U</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <a class="navbar-brand mr-auto" href="./index.html" style="margin-left: 15rem;"><img src="img/logo.jpg" height="40" width="150" alt="logo"></a>
+           <div class="collapse navbar-collapse" id="Navbar">     
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ml-3"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="far fa-credit-card fa-lg"></span> Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact us</a></li>
+                </ul>           
+            </div>
+        </div>
+    </nav>
+
+    <div id="buyModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Registration of Subscription</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <img src="img/gym1.jpg" class="d-flex img-thumbnail">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <h5 class="text-secondary">Name:</h5>
+                                        <h5 class="text-dark col-9">First Experience</h5>
+                                    </div>
+                                    <div class="row">
+                                        <h5 class="text-secondary">Description: </h5>
+                                        <h5 class="text-dark">A subscription for newbies. 12 workouts with qualified trainers!</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-dark col-12 col-sm-6">
+                                            <h5 class="col-12">Price</h5>
+                                            <span class="badge badge-secondary col-9 border border-dark"><s>$1000/month</s></span>
+                                            <span class="badge badge-warning col-9 border border-dark"><h5>$890/month</h5></span> 
+                                        </div>
+                                        <div class="text-dark col-12 col-sm-6">
+                                            <h5>Number of Visits:</h5>
+                                            <span class="badge badge-success ml-5 mt-2 border border-dark"><h3>12</h3></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12 col-sm-4">
+                                    <h5 class="">First Name:</h5>
+                                    <input type="text" class="form-control form-control-sm" id="firstname" placeholder="">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <h5 class="">Last Name:</h5>
+                                    <input type="text" class="form-control form-control-sm" id="lastname" placeholder="">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <h5 class="">Age:</h5>
+                                    <input type="number" class="form-control form-control-sm" id="lastname" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <h5 class="">Phone Number:</h5>
+                                    <input type="number" class="form-control form-control-sm" id="firstname" placeholder="">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <h5 class="">Email:</h5>
+                                    <input type="email" class="form-control form-control-sm" id="lastname" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="">Your debit/credit card:</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="number" class="form-control form-control-sm ml-3 col-5" id="firstname" placeholder="Card Number">
+                                <div class="col-2">
+                                    <input type="text" class="form-control form-control-sm" id="firstname" placeholder="CVV">
+                                </div>
+                                <div class="col-2">
+                                    <input type="number" class="form-control form-control-sm" id="firstname" placeholder="MM">
+                                </div>
+                                <h5>/</h5>
+                                <div class="col-2">
+                                    <input type="number" class="form-control form-control-sm" id="firstname" placeholder="YY">
+                                </div>
+                            </div>
+                            <div class="row col-12 mt-3 ml-1 align-items-center">
+                                <input class="form-check-input" id="cb" type="checkbox">
+                                <label class="form-check-label col-8"><h5>Call me back to refine the purchase</h5></label>
+                                <button class="btn btn-danger btn-lg font-weight-bold mr-auto col-4" id="buySubsButton">$ Buy Subscription</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-12 order-sm-first">
+                <h3 class="text-center">Subscriptions</h3>
+            </div>
+            <div class="col-12 row row-content">
+                <div class="col-12 col-sm-6 order-sm-last col-md-6">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                          
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                    
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                          
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                          
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                      
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                           
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>                          
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>  
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last col-md-6 mt-3">
+                    <div class="card border border-warning bg-dark text-light" style="border-radius: 3%;">
+                        <h4 class="card-header text-warning text-center">First Experience</h4>
+                        <div class="card-body">
+                            <div>
+                                <img class="d-flex img-thumbnail align-self-center"
+                                src="img/gym1.jpg" alt="gym">
+                                <div class="col-12">
+                                    <h5 class="d-none d-sm-block text-center mt-2">
+                                        A subscription for newbies. 12 workouts with qualified trainers!
+                                    </h5>    
+                                    <h3 class="mt-0">
+                                        <span class="badge badge-secondary border border-light text-warning"><s>$1000/month</s></span>
+                                        <span class="badge badge-warning border border-light">$890/month</span>                               
+                                        <a data-toggle="modal" data-target="#buyModal"><button class="btn btn-danger btn-md font-weight-bold border border-light" id="buyButton">Buy now!</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 align-self-center">             
+                    <a class="navbar-brand ml-3" href="#"><img src="img/logo.jpg" class="d-flex align-self-center" height="50" width="150" alt="logo"></a>
+                    <div class="">             
+                        <div class="col-auto">
+                            <h5>©Copyright. All rights reserved</h5>
+                            <p>In case you have any problems contact us by email below</p>
+                            <a class="text-info" href="mailto:client.problems@support.gym"><span class="far fa-envelope fa-lg"> client.problems@support.gym</span></a>
+                        </div>
+                    </div>
+               </div>
+               <div class="col-12 col-sm-6 align-self-center mr-auto">
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html"><span class="fa fa-home"> Home</span></a></li>
+                        <li><a href="#"><span class="far fa-credit-card"> Subscriptions</span></a></li>
+                        <li><a href="./aboutus.html"><span class="fa fa-info"> About us</span></a></li>
+                        <li><a href="./contactus.html"><span class="fa fa-address-card"> Contact us</span></a></li>
+                    </ul>
+                    <p class="text-danger">Follow us on social networks</p>
+                    <div class="">
+                        <a class="btn btn-social-icon btn-instagram bg-warning" href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i>:</a>
+                        <a class="btn btn-social-icon btn-youtube bg-danger ml-3" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i>:</a>
+                        <a class="btn btn-social-icon btn-facebook ml-3" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i>:</a>
+                        <a class="btn btn-social-icon btn-twitter bg-primary ml-3" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i>:</a>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </footer>
+
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
